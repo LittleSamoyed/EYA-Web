@@ -1,4 +1,8 @@
 /* Reset styles */
+@font-face {
+	font-family: 'LongCang';
+	src: url('https://littlesamoyed.github.io/Samoyed/EYA/css/LongCang-Regular.ttf') format('truetype');
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -7,10 +11,11 @@
 
 /* Global styles */
 body {
-	font-family: 'Helvetica Neue', sans-serif;
+	/* font-family: 'Helvetica Neue', sans-serif; */
 	line-height: 1.5;
 	background-color: #f7f7f7;
 	color: #333;
+	font-family: 'LongCang', sans-serif;
 }
 
 .container {
