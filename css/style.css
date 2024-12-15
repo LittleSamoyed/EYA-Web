@@ -1,126 +1,165 @@
-/* Reset styles */
-@font-face {
-	font-family: 'LongCang';
-	src: url('https://littlesamoyed.github.io/Samoyed/EYA/css/LongCang-Regular.ttf') format('truetype');
-}
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-/* Global styles */
 body {
-	/* font-family: 'Helvetica Neue', sans-serif; */
-	line-height: 1.5;
-	background-color: #f7f7f7;
-	color: #333;
-	font-family: 'LongCang', sans-serif;
-}
-
-.container {
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 40px;
-}
-
-a {
-	color: #999;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #000;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #eaeaea;
 }
 
 header {
-	background-color: #111;
-	color: #fff;
+    background: #2c2c2c;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+header h1 img {
+    max-height: 40px;
+    margin-right: 10px;
 }
 
 nav ul {
-	list-style: none;
-	display: flex;
-	align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-nav li {
-	margin-right: 20px;
+nav ul li {
+    margin-left: 20px;
 }
 
-nav a {
-	font-size: 18px;
-	font-weight: bold;
-	letter-spacing: 1px;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-	color: #fff;
+nav ul li a:hover {
+    color: #ffc107;
 }
 
-main h2 {
-	margin-bottom: 30px;
-	text-align: center;
-	font-size: 36px;
-	font-weight: bold;
-	letter-spacing: 1px;
+nav ul li .btn-english {
+    padding: 5px 10px;
+    background: #ffc107;
+    border-radius: 5px;
+    color: #2c2c2c;
+    font-size: 14px;
+}
+
+main .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
 section {
-	padding: 80px 0;
+    margin: 20px 0;
+    padding: 20px;
+    background: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-ul.project-items {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	list-style: none;
+h2 {
+    color: #fff;
 }
 
-ul.project-items li {
-	flex-basis: calc(33.33% - 20px);
-	margin-bottom: 40px;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-	border-radius: 5px;
+.project-items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-ul.project-items img {
-	display: block;
-	width: 100%;
-	height: auto;
+.project-items li {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 15px;
+    color: #eaeaea;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-form label {
-	display: block;
-	margin-bottom: 10px;
-	font-size: 16px;
+.project-items li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-input,
-textarea {
-    resize: none;
-	display: block;
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 20px;
-	border: none;
-	border-radius: 5px;
-	background-color: #f1f1f1;
+.project-items img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-button[type="submit"] {
-	display: block;
-	margin: 0 auto;
-	background-color: #111;
-	color: #fff;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	transition: background-color 0.3s ease-in-out;
+footer {
+    background: #2c2c2c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
-button[type="submit"]:hover {
-	background-color: #222;
-	cursor: pointer;
+.team {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team li {
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+	list-style-type:none
+}
+
+.team img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 链接的默认样式 */
+a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* 鼠标悬停时 */
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffc107, 0 0 10px #ffc107;
+}
+
+/* 访问过的链接 */
+/* a:visited {
+    color: #d4a017;
+} */
+
+/* 活动状态时 */
+a:active {
+    color: #ff5722;
+    text-shadow: none;
 }
